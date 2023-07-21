@@ -1,0 +1,16 @@
+[package]
+name="rust_app"
+version = "0.1.0"    # the current version, obeying semver
+authors = ["David Fyfe"]
+
+[lib]
+crate-type=["staticlib"]
+
+[dependencies]
+cstr_core = { version = "0.2.6", default-features = false }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
